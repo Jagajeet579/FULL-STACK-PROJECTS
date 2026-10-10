@@ -1,0 +1,5 @@
+node_modules/
+social.db
+social.db-shm
+social.db-wal
+.env

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoardFlow — My Projects</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+
+  <main class="page">
+    <div class="page-header">
+      <div>
+        <h1>My projects</h1>
+        <p>Boards you own or have been added to.</p>
+      </div>
+      <button class="btn btn-primary" id="newProjectBtn">+ New project</button>
+    </div>
+
+    <div id="projectGrid"><p>Loading…</p></div>
+  </main>
+
+  <!-- New project modal -->
+  <div class="modal-backdrop" id="newProjectModal">
+    <div class="modal">
+      <button class="modal-close" id="closeNewProject">&times;</button>
+      <h2>New project</h2>
+      <div id="newProjectMsg"></div>
+      <form id="newProjectForm">
+        <div class="field">
+          <label for="pName">Project name</label>
+          <input type="text" id="pName" required />
+        </div>
+        <div class="field">
+          <label for="pDesc">Description (optional)</label>
+          <textarea id="pDesc"></textarea>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Create project</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loopline — Feed</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+
+  <main class="page">
+    <h1>Feed</h1>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-scope="all">Everyone</button>
+      <button class="tab" data-scope="following">Following</button>
+    </div>
+
+    <div class="composer" id="composer" style="display:none;">
+      <textarea id="postContent" placeholder="What's on your mind?" maxlength="1000"></textarea>
+      <div class="composer-footer">
+        <span class="char-count" id="charCount">0 / 1000</span>
+        <button class="btn btn-primary" id="postBtn">Post</button>
+      </div>
+      <div id="composerMsg"></div>
+    </div>
+
+    <div id="feedContent"><p>Loading…</p></div>
+  </main>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

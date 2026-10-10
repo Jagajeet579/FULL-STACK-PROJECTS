@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Board — BoardFlow</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+
+  <main class="page" id="boardPage">
+    <p>Loading…</p>
+  </main>
+
+  <!-- Add task modal -->
+  <div class="modal-backdrop" id="taskModal">
+    <div class="modal">
+      <button class="modal-close" id="closeTaskModal">&times;</button>
+      <h2>New task</h2>
+      <div id="taskModalMsg"></div>
+      <form id="newTaskForm">
+        <div class="field">
+          <label for="tTitle">Title</label>
+          <input type="text" id="tTitle" required />
+        </div>
+        <div class="field">
+          <label for="tDesc">Description</label>
+          <textarea id="tDesc"></textarea>
+        </div>
+        <div class="field">
+          <label for="tAssignee">Assign to</label>
+          <select id="tAssignee"><option value="">Unassigned</option></select>
+        </div>
+        <div class="field">
+          <label for="tDue">Due date (optional)</label>
+          <input type="date" id="tDue" />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Create task</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add member modal -->
+  <div class="modal-backdrop" id="memberModal">
+    <div class="modal">
+      <button class="modal-close" id="closeMemberModal">&times;</button>
+      <h2>Add a teammate</h2>
+      <div id="memberModalMsg"></div>
+      <form id="addMemberForm">
+        <div class="field">
+          <label for="mUsername">Username</label>
+          <input type="text" id="mUsername" placeholder="e.g. rahul" required />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Add to project</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/board.js"></script>
+</body>
+</html>
